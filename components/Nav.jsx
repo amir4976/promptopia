@@ -75,9 +75,37 @@ function Nav() {
             height={37} 
             className='rounded-full'
             alt='profile' 
-            onClick={}
+            onClick={()=>{
+             setToggleDropDown((prev)=> !prev)  
+            }}
             />
+              {ToggleDropDown && (
+                <div className="dropdown">
+                  <Link href='/profile'
+                  className='dropdown_link'
+                  onClick={()=>setToggleDropDown(false)}
+                  >
+                    my profile
+                  </Link>
+                  <Link href='/create-prompt'
+                  className='dropdown_link'
+                  onClick={()=>setToggleDropDown(false)}
+                  >
+                    create prompt
+                  </Link>
 
+                  <button type='button' 
+                  className='mt-5 w-full black_btn'
+                  onClick={()=>{
+                    setToggleDropDown(false)
+                    singOut()
+                  }}
+                  >
+                    sing out
+                  </button>
+                </div>
+
+              )}
           </div>
         ):(
           <>
@@ -91,7 +119,7 @@ function Nav() {
             </button>
           ))}
         </>
-        
+
         )}
       </div>
 
