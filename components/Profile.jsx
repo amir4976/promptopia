@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Profilte() {
+function Profile() {
   return (
     <div>Profilte</div>
   )
 }
 
-export default Profilte
+export default Profile
