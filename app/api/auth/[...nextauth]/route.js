@@ -11,7 +11,11 @@ const handler = NextAuth({
         })
     ],
     async session({session}){
-
+        if(session){
+            console.log('you are in')
+        }else{
+            console.log('you are not')
+        }
     },
     async signIn({profile}){
 

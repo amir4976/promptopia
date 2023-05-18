@@ -15,12 +15,16 @@ function Nav() {
 
 
   useEffect(() => {
-    const setProvider = async () => {
+    
+    const setProviderFunction = async () => {
       const response = await getProviders()
+      console.log(response)
       setProvider(response)
     }
-    setProvider()
-  }, [])
+
+
+    setProviderFunction()
+  }, [] )
 
 
   return (
